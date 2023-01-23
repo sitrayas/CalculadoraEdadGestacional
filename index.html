@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos.css">
 
     <title>Document</title>
 </head>
-<title>Calculadora de edad gestacional</title>
+
 <body>
+
   <div class="formulaeg">
     <!-- Formulario para introducir la fecha de parto -->
     <form>
-      <label for="fecha-parto">Calcular la Edad Gestacional</label><br>
+      <label class="titulo" for="fecha-parto">Calcular la Edad Gestacional</label><br>
       <label for="fecha-parto" class="small-text">Fecha de tu último período menstrual*</label><br>
 <br>
       <input type="date" id="fecha-parto"><br><br>
@@ -22,7 +24,7 @@
     </form>
     
     <!-- Elemento donde se mostrará el resultado -->
-    <p id="resultado"></p>
+    <p class="r">Edad Gestional <h3 id="resultado" style="color: rgb(0, 182, 204);"></h3></p>
 
     <script>
         function calcularEdadGestacional() {
@@ -56,11 +58,11 @@ let edadGestacionalDias = Math.floor(diferenciaDias);
 
 
             // Muestra el resultado en la página
-            document.getElementById("resultado").innerHTML = `Edad Gestacional: ${edadGestacionalSemanas} semanas`;
+            document.getElementById("resultado").innerHTML = `<h2>${edadGestacionalSemanas} semanas </h2>`;
             
       }
     </script>
     </div>
-    <script src="script.js"></script>  
+      
   </body>
 </html>
