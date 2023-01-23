@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<title>Calculadora de edad gestacional</title>
+<body>
+  <div class="formulaeg">
+    <!-- Formulario para introducir la fecha de parto -->
+    <form>
+      <label for="fecha-parto">Calcular la Edad Gestacional</label><br>
+      <label for="fecha-parto" class="small-text">Fecha de tu último período menstrual*</label><br>
+<br>
+      <input type="date" id="fecha-parto"><br><br>
+      <button type="button" onclick="calcularEdadGestacional()">Calcular Edad Gestacional > </button>
+    </form>
+    
+    <!-- Elemento donde se mostrará el resultado -->
+    <p id="resultado"></p>
+
+    <script>
+        function calcularEdadGestacional() {
+          // Obtiene la fecha de parto del formulario
+          let fechaParto = document.getElementById("fecha-parto").value;
+          
+          // Crea un objeto de fecha a partir de la fecha de parto
+          let fecha = new Date(fechaParto);
+          
+          // Obtiene el número de milisegundos transcurridos desde la fecha de parto hasta el 1 de enero de 1970
+          let milisegundosParto = fecha.getTime();
+          
+          // Obtiene el número de milisegundos transcurridos desde la fecha actual hasta el 1 de enero de 1970
+          let milisegundosActual = Date.now();
+          
+          // Calcula la diferencia en milisegundos entre ambas fechas
+          let diferenciaMilisegundos = milisegundosActual - milisegundosParto;
+          
+          // Calcula la diferencia en semanas
+          let diferenciaSemanas = diferenciaMilisegundos / (7 * 24 * 60 * 60 * 1000);
+          
+          // Redondea la diferencia a la baja
+          let edadGestacional = Math.floor(diferenciaSemanas);
+          
+          // Calcula la diferencia en días
+let diferenciaDias = diferenciaMilisegundos / (24 * 60 * 60 * 1000);
+
+// Redondea la diferencia a la baja
+let edadGestacionalSemanas = Math.floor(diferenciaSemanas);
+let edadGestacionalDias = Math.floor(diferenciaDias);
+
+
+            // Muestra el resultado en la página
+            document.getElementById("resultado").innerHTML = `Edad Gestacional: ${edadGestacionalSemanas} semanas`;
+            
+      }
+    </script>
+    </div>
+    <script src="script.js"></script>  
+  </body>
+</html>
