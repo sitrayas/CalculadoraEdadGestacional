@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: tahoma, sans-serif, roboto;	
+	/*background-image: url(/img/fondocal.webp);*/
 }
 
 input {
@@ -62,6 +63,13 @@ button:hover{
 	background: rgba(145, 156, 210, 0.7);
 	box-shadow: 0 10px 20px rgba(221, 217, 217, 0.5);
 	border-radius: 10px;
+
+
+		background-image: url("img/fondocal.webp");
+		background-size: cover;
+		background-position: center;
+		
+	
 }
 
 bo
