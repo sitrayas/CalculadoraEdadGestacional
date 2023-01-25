@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="estilos.css">
-
-    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!--<lnk rel="stylesheet" href="estilos.css">-->
+  <!--LEEME:Código desarrollado por Josue Acuna P. - @sitrayas. Por favor, 
+    no olvides mencionar mi nombre o perfil al compartir o utilizar este código-->
+    <!--README: Code developed by Josue Acuna P. - @sitrayas. Please,
+    Don't forget to mention my name or profile when sharing or using this code-->
+  <title>Document</title>
 </head>
 
 <body>
@@ -18,51 +22,63 @@
     <form>
       <label class="titulo" for="fecha-parto">Calcular la Edad Gestacional</label><br>
       <label for="fecha-parto" class="small-text">Fecha de tu último período menstrual*</label><br>
-<br>
-      <input type="date" id="fecha-parto"><br><br>
+      <br>
+      <!-- Poniendo Limites a las fechas del calendario -->
+      <input type="date" id="fecha-parto" min="2019-01-01" max="2024-12-31"><br><br>
+
       <button type="button" onclick="calcularEdadGestacional()">Calcular Edad Gestacional > </button>
     </form>
-    
+
     <!-- Elemento donde se mostrará el resultado -->
-    <p class="r">Edad Gestional <h3 id="resultado" style="color: rgb(0, 182, 204);"></h3></p>
+    <p class="r"> Edad Gestional:
+    <h3 id="resultado" style="color: rgb(0, 182, 204);"></h3>
+    </p>
 
+     <!--LEEME:Código desarrollado por Josue Acuna P. - @sitrayas. Por favor, 
+    no olvides mencionar mi nombre o perfil al compartir o utilizar este código-->
+    <!--README: Code developed by Josue Acuna P. - @sitrayas. Please,
+    Don't forget to mention my name or profile when sharing or using this code-->
     <script>
-        function calcularEdadGestacional() {
-          // Obtiene la fecha de parto del formulario
-          let fechaParto = document.getElementById("fecha-parto").value;
-          
-          // Crea un objeto de fecha a partir de la fecha de parto
-          let fecha = new Date(fechaParto);
-          
-          // Obtiene el número de milisegundos transcurridos desde la fecha de parto hasta el 1 de enero de 1970
-          let milisegundosParto = fecha.getTime();
-          
-          // Obtiene el número de milisegundos transcurridos desde la fecha actual hasta el 1 de enero de 1970
-          let milisegundosActual = Date.now();
-          
-          // Calcula la diferencia en milisegundos entre ambas fechas
-          let diferenciaMilisegundos = milisegundosActual - milisegundosParto;
-          
-          // Calcula la diferencia en semanas
-          let diferenciaSemanas = diferenciaMilisegundos / (7 * 24 * 60 * 60 * 1000);
-          
-          // Redondea la diferencia a la baja
-          let edadGestacional = Math.floor(diferenciaSemanas);
-          
-          // Calcula la diferencia en días
-let diferenciaDias = diferenciaMilisegundos / (24 * 60 * 60 * 1000);
+      function calcularEdadGestacional() {
+        // Obtiene la fecha de parto del formulario
+        let fechaParto = document.getElementById("fecha-parto").value;
 
-// Redondea la diferencia a la baja
-let edadGestacionalSemanas = Math.floor(diferenciaSemanas);
-let edadGestacionalDias = Math.floor(diferenciaDias);
+        // Crea un objeto de fecha a partir de la fecha de parto
+        let fecha = new Date(fechaParto);
+
+        // Obtiene el número de milisegundos transcurridos desde la fecha de parto 
+        let milisegundosParto = fecha.getTime();
+
+        // Obtiene el número de milisegundos transcurridos desde la fecha actual 
+        let milisegundosActual = Date.now();
+
+        // Calcula la diferencia en milisegundos entre ambas fechas
+        let diferenciaMilisegundos = milisegundosActual - milisegundosParto;
+
+        // Calcula la diferencia en semanas
+        let diferenciaSemanas = diferenciaMilisegundos / (7 * 24 * 60 * 60 * 1000);
+
+        // Redondea la diferencia a la baja
+        let edadGestacional = Math.floor(diferenciaSemanas);
+
+        // Calcula la diferencia en días
+        let diferenciaDias = diferenciaMilisegundos / (24 * 60 * 60 * 1000);
+
+        // Redondea la diferencia a la baja
+        let edadGestacionalSemanas = Math.floor(diferenciaSemanas);
+        let edadGestacionalDias = Math.floor(diferenciaDias);
 
 
-            // Muestra el resultado en la página
-            document.getElementById("resultado").innerHTML = `<h2>${edadGestacionalSemanas} semanas </h2>`;
-            
+        // Muestra el resultado en la página
+        document.getElementById("resultado").innerHTML = `<h2>${edadGestacionalSemanas} semanas </h2>`;
+
       }
     </script>
-    </div>
-      
-  </body>
+  </div>
+
+</body>
+ <!--LEEME:Código desarrollado por Josue Acuna P. - @sitrayas. Por favor, 
+    no olvides mencionar mi nombre o perfil al compartir o utilizar este código-->
+    <!--README: Code developed by Josue Acuna P. - @sitrayas. Please,
+    Don't forget to mention my name or profile when sharing or using this code-->
 </html>

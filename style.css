@@ -1,7 +1,10 @@
 *{
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+/*LEEME:Código desarrollado por Josue Acuna P. - @sitrayas. Por favor, 
+no olvides mencionar mi nombre o perfil al compartir o utilizar este código
+README: Code developed by Josue Acuna P. - @sitrayas. Please,
+Don't forget to mention my name or profile when sharing or using this code*/
 body {
 	margin: 0;
 	padding: 0;
@@ -26,7 +29,10 @@ input:focus {
 .titulo{
 	font-size: 30px;
 }
-
+/*LEEME:Código desarrollado por Josue Acuna P. - @sitrayas. Por favor, 
+no olvides mencionar mi nombre o perfil al compartir o utilizar este código
+README: Code developed by Josue Acuna P. - @sitrayas. Please,
+Don't forget to mention my name or profile when sharing or using this code*/
 button{
 	background-color:rgb(0, 182, 204);
 	padding: 10px 10px;
@@ -58,7 +64,7 @@ button:hover{
 	left: 50%;
 	color: white;
 	transform: translate(-50%, -50%);
-	width: 400px; 
+	width: 500px; 
 	padding: 40px;
 	background: rgba(145, 156, 210, 0.7);
 	box-shadow: 0 10px 20px rgba(221, 217, 217, 0.5);
@@ -85,3 +91,7 @@ bo
 	font-size: 11px;  
  }
 
+/*LEEME:Código desarrollado por Josue Acuna P. - @sitrayas. Por favor, 
+no olvides mencionar mi nombre o perfil al compartir o utilizar este código
+README: Code developed by Josue Acuna P. - @sitrayas. Please,
+Don't forget to mention my name or profile when sharing or using this code*/
